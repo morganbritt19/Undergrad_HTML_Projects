@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Nearest Integer</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            function loader() {
+            var input = document.getElementById("num1").value;
+            var lower = parseInt(input);
+            var higher = lower + 1;
+            var result;
+            
+            if(input - lower > higher - input){
+                result = higher;
+            } else{
+                result = lower;
+            }
+            
+            document.getElementById("result").innerHTML = result;
+            }
+            </script>
+    </head>
+
+    <body>
+        <h1>Nearest Integer</h1>
+
+        <label>
+            Enter a number:
+        </label> <input type="number" id="num1">
+        <br>
+        <br>
+        
+        <button type="submit" onclick="loader()">
+            Determine nearest Integer
+        </button>
+        <br>
+
+        <div id="result">
+        </div>
+    </body>
+</html>
+
+
