@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Letter Matrix</title>
+        <meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1>The Letter Matrix</h1>
+        
+        <script>
+            function letterMatrix() {
+            var script = "";
+            var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            
+            var rows = document.getElementById("row").value;
+            var cols = document.getElementById("column").value;
+            
+
+            for (var i = 0; i < rows; i++) {
+                for (var j = 0; j < cols; j++) {
+                    var k = ((i * rows) + j) % 26;
+                    script = script + letters.charAt(k) + "&nbsp;";
+                }
+            
+            script = script + "<br>";
+            }
+              
+            document.getElementById("results").innerHTML = script;
+            }
+            </script>
+
+            <form>
+                <input type="number" id="row" placeholder="Rows: " />
+
+                <input type="number" id="column" placeholder="Columns: " />
+
+                <button type="button" onclick="letterMatrix()">
+                    Print Matrix
+                </button>
+            </form>
+            
+            <pre id="results">
+            </pre>
+
+    </body>
+</html>
