@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Grocery List</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            function displayCart(){
+                let str = '<ul>'
+
+                for (let i = 0; i < cartItem.length; i++){
+                    str += '<li>'+ cartItem[i] + ': ' + cartPrice[i] + '</li>';
+                }
+                str += '</ul>';
+                document.getElementById("cart").innerHTML = str;
+                document.getElementById("cartTotal").innerHTML = 'The total of the list is: $' + cartPrice.reduce(addTotal, 0);
+            }
+
+            function addTotal(total, num) {
+                return total + Math.round(num);
+            }
+        </script>
+    </head>
+
+    <body>
+        
+        <h1>Grocery List</h1>
+
+        <button onclick="addCart()">
+            Click here to enter a grocery item
+        </button>
+
+        <h2>Item Price</h2>
+
+        <div id="cart">
+        </div>
+
+        <h3 id="cartTotal"></h3>
+
+        <script type="text/javascript">
+            let cartItem = [];
+            let cartPrice = [];
+
+            function addCart() {
+                
+                let itemName = prompt("Please enter and item for grocery list");
+                    cartItem.push(itemName);
+
+                let itemPrice = prompt("Enter the price of item");
+                    cartPrice.push(itemPrice);
+
+            displayCart();
+            }       
+        </script>
+    </body>
+</html>
