@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Image Display Application</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+<!--Course Code and Section: CSCI 3300-W1-->
+        <!--Program Date: 8/30/2021-->
+        <!--My name: Morgan Britt-->
+
+    <body>
+        
+
+        <h1>Image Display Application</h1>
+
+        <script>
+            function showimage(){
+                document.getElementById("image").style.display="block";
+            }
+        </script>
+    
+
+            <div id="myimage">
+                <img src="[insert_image_here] alt="[description_here]" style="display:none" id="image"> 
+                </div>
+            <button type="button" name="button" onclick="showimage()">
+                Display Image
+            </button>
+
+            
+        <br>
+        <footer> <br> &copy; Copyright 2021</footer>
+    </body>
+</html>
