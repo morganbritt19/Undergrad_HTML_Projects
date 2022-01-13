@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Two Train Tool</title>
+        <meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+
+    <script>
+        function calculateTime() {
+            let trainSpeedA = parseInt(document.getElementById("trainA").value);
+            let trainSpeedB = parseInt(document.getElementById("trainB").value);
+
+            let distanceBetweenStation = parseInt(document.getElementById("distance").value);
+
+            let trainSpeedAMinute = trainSpeedA / 60;
+            let trainSpeedBMinute = trainSpeedB / 60;
+
+            let trainADistance = 0;
+            let trainBDistance = distanceBetweenStation;
+
+            let currentMinute = 0;
+
+            while (trainADistance < trainBDistance) {
+                trainADistance += trainSpeedAMinute;
+                trainBDistance -= trainSpeedBMinute;
+
+                currentMinute++;
+                alert("Minute " + currentMinute + " Train A Position: " + trainADistance.toFixed(2) + " miles Train B Position: " 
+                + trainBDistance.toFixed(2) + " miles")
+            }
+            document.getElementById('trainMeet').innerHTML = "Trains meet at the " + trainADistance.toFixed(2) 
+            + " mile mark after " + currentMinute + " minutes."
+        }
+    </script>
+
+    </head>
+    <body>
+        <h1>Two Train Tool</h1>
+
+    <p>Train A speed in miles per hour: <input type="text" id="trainA"></p>
+    <br>
+
+    <p>Train B speed in miles: <input type="text" id="trainB"></p>
+    <br>
+
+    <p>Distance between Eastford and Westford: <input type="text" id="distance"></p>
+    <br>
+
+    <input type="button" onclick="calculateTime()" value="Calculate"><br>
+    <p id="trainMeet"></p>
+        
+    </body>
+</html>
+
