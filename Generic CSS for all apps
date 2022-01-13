@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    font-family:'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+div {
+    padding: 3px;
+}
+
+footer {
+    font-family:'Courier New', Courier, monospace;
+    padding: 3px;
+    font-weight: bold;
+}
+img {
+    height: 384px;
+    width: 512px;
+    margin-left: auto;
+    margin-right: auto;
+}
