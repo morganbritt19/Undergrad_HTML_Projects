@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Morgan Britt's Book App</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            function display() {
+
+                let title=document.bookapp.booktitle.value;
+                let auth=document.bookapp.author.value;
+                let sub=document.bookapp.subject.value;
+
+                alert("Title: " + title + "\nAuthor: " + auth + "\nSubject: " + sub);
+            }
+            </script>
+
+    </head>
+
+    <body>
+         
+        <form name="bookapp" action="javascript:display();">
+
+            <h1>Morgan Britt's Book App</h1>
+        <div>
+            <span class="label">
+                Enter a book title: <input type="text" id="booktitle"> 
+            </span>
+        </div>
+
+        <div>
+            <span class="label">
+                Enter the book's author: <input type="text" id="author"> 
+            </span>
+        </div>
+
+        <div>
+            <span class="label">
+                Enter the book subject: <input type="text" id="subject"> 
+            </span>
+        </div>
+
+            <input type="submit">
+        </form>
+
+        <footer>Morgan Britt <br> &copy; Copyright 2021</footer>
+
+    </body>
+</html>
