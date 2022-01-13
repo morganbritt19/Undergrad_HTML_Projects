@@ -28,9 +28,5 @@
             <button type="button" name="button" onclick="showimage()">
                 Display Image
             </button>
-
-            
-        <br>
-        <footer> <br> &copy; Copyright 2021</footer>
     </body>
 </html>
