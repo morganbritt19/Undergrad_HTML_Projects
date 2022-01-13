@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Number Examination Tool</title>
+        <meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+    </head>
+
+    <body> 
+        <h1>Number Examination Tool</h1>
+
+        <script>
+            let arr = [];
+            let numCount = 0;
+            let total = 0;
+            let totalFloat = 0;
+            let floatCount = 0;
+          
+           while(true) {
+               let i = prompt("Enter a number: ");
+
+               if(i == -1)
+                   break;
+
+               arr[numCount] = Number(i);
+               numCount++
+           }
+
+           for(i = 0; i < arr.length; i++) {
+               if(Number.isInteger(arr[i])) {
+                   if(arr[i] % 2 == 0) {
+                       document.write(arr[i] + " is an even number.<br>");
+                       total = total + arr[i];
+                   }
+                   else {
+                       document.write(arr[i] + " is an odd number.<br>");
+                       total = total + arr[i];
+                   }
+               }
+               else {
+                   document.write(arr[i].toFixed(2) + " is a floating-point number.<br>");
+                  
+                   total = total + arr[i];
+                  
+                   totalFloat = totalFloat + arr[i];
+                   floatCount++;
+               }
+           }
+           if(numCount == 0) {
+               document.write("No number were entered.<br>");
+           }
+           else {
+               document.write("The total is " + total.toFixed(2) + " and the average is " + (total / arr.length).toFixed(2) + ".<br>");
+           }
+          
+           if(floatCount == 0) {
+               document.write("No floating point numbers were entered.<br>");
+           }
+           else {
+               document.write("The sum of just the floating point numbers is " + totalFloat.toFixed(2) + " with an average of " 
+               + (totalFloat / floatCount).toFixed(2) + ".<br>");
+           }
+        </script>
+
+    </body>
+</html>
