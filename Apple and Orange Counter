@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Apple and Orange Counter</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            let countApple = 0;
+            let countOrange = 0;
+    
+            function getInput(){
+                while (true) {
+                    let userInput = prompt("Enter an element: ");
+    
+                    if(userInput.toLowerCase() === "done") {
+                        break;
+                    }
+
+                    if (userInput.toLowerCase() ==='apple')
+                        countApple ++;
+                    else if (userInput.toLowerCase() === 'orange')
+                        countOrange ++;
+                    else {
+                        alert("Invalid Input. Try again");
+                    }
+                }
+
+                showResult();
+            }
+    
+            function showResult(){
+                let result = "You typed 'apple' " + countApple;
+
+                if (countApple <= 1) result += " time";
+                else result += " times ";
+
+                result +=" and 'orange' " + countOrange;
+
+                if (countOrange <= 1) result += " time";
+                else result += " times ";
+
+                alert(result);
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <h1>Apple and Orange Counter</h1>
+
+        <button type="button" onclick="getInput()">
+            Start!
+        </button>
+        
+    </body>
+</html>
