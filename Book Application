@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Morgan Britt's Book App</title>
+        <title>Book App</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
 
@@ -22,7 +22,7 @@
          
         <form name="bookapp" action="javascript:display();">
 
-            <h1>Morgan Britt's Book App</h1>
+            <h1>Book App</h1>
         <div>
             <span class="label">
                 Enter a book title: <input type="text" id="booktitle"> 
@@ -44,7 +44,7 @@
             <input type="submit">
         </form>
 
-        <footer>Morgan Britt <br> &copy; Copyright 2021</footer>
+        <footer><br> &copy; Copyright 2021</footer>
 
     </body>
 </html>
