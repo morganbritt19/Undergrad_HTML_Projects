@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Larger of Two Numbers</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            function largestnum() {
+               let num1, num2;
+               let result = "";
+               num1 = parseInt(document.getElementById("firstnum").value);
+               num2 = parseInt(document.getElementById("secondnum").value);
+               if(num1 > num2) {
+                   result += "The first number (" + num1 + ") is larger.";
+               } else if(num2 > num1) {
+                   result += "The second number (" + num2 + ") is larger.";
+               } else {
+                   result += "Both numbers are equal."
+               }
+               document.getElementById("result").innerHTML = result;
+            }
+            </script>
+
+    </head>
+
+    <body>
+
+        <h1>Larger of Two Numbers</h1>
+        
+        <label>
+            Enter the first number:
+        </label>
+        <input type="text" id="firstnum">
+        <br>
+
+        <label>
+            Enter the second number:
+        </label>
+        <input type="text" id="secondnum">
+        <br>
+        <br>
+
+        <button onclick="largestnum()">
+            Determine the larger number
+        </button>
+
+        <div id="result"> 
+        </div>
+
+    </body>
+</html>
