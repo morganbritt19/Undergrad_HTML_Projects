@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Point of Sale System</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Point of Sale System</h1>
+    <div>
+       <table>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+
+           <tbody id="productlist"></tbody>
+           <tbody id="pricelist"></tbody>
+
+           <tr>
+               <th>Select Product</th>
+               <td id="selectproductlist"></td>
+               <th>Quantity</th>
+               <td>
+                   <input type="text" value="" name="quantity" id="quantity">
+                   <input type="button" value="Add" onClick="AddProduct()">
+               </td>
+            </tr>
+
+           <tr>
+               <th>Selected Product List</th>
+            </tr>
+
+               <tbody id="cartList"></tbody>
+       </table>
+    </div>
+
+    <script>
+        let products = [
+            [1, 'Umbrella'],
+            [2, 'Rain Coat'],
+            [3, 'Swimsuit']
+        ];
+ 
+        let prices = [
+            [1, '14.95'],
+            [2, '119.99'],
+            [3, '40.00']
+        ];
+ 
+        data = '<th>Product Name</th>';
+        data1 = '<select id="productListSelected">';
+ 
+        products.forEach(activity => { 
+            data += "<td>"+ activity[1] + "</td>";
+            data1 += "<option value='" + activity[0] + "'>" + activity[1] + "</option>";
+        });
+ 
+        data1 += '</select>';
+ 
+        document.getElementById('selectproductlist').innerHTML = data1;
+        document.getElementById('productlist').innerHTML = data;
+ 
+        price = '<th>Price</th>';
+        prices.forEach(activity => {
+            price += "<td>$"+ activity[1] + "</td>";
+        });
+        
+        document.getElementById('pricelist').innerHTML = price;    
+       
+        let cartItems = [];
+        function AddProduct(){
+ 
+            itemCode = document.getElementById('productListSelected').value;
+            quantity = document.getElementById('quantity').value;
+ 
+            prices.forEach(activity => {
+                if(activity[0] == itemCode){
+                    itemPrice = activity[1];
+                }
+            });
+ 
+            let totalPrice = quantity * itemPrice;
+            fund = 0;
+ 
+            for(let i = 0; i < cartItems.length; i++) {
+                if(cartItems[i][0] == itemCode){
+                    cartItems[i][1] = parseInt(cartItems[i][1]) + parseInt(quantity);
+                    cartItems[i][3] += quantity * totalPrice;
+                    fund = 1;
+                }
+            }
+ 
+            if(fund == 0){
+                cartItems.push([itemCode, quantity, itemPrice, totalPrice]);
+            }
+ 
+            data3 = '<tr><th>Product Name</th><th>Quantity</th><th>Price</th><th>Total</th>';
+            for(let i = 0; i < cartItems.length; i++) {
+                let item = cartItems[i];
+                data3 += "<tr>";
+ 
+                products.forEach(activity => {
+                    if(cartItems[i][0] == activity[0]){
+                        productN = activity[1];
+                    } 
+                    else{productN}
+                });
+ 
+                data3 += "<td>" + productN + "</td>";
+ 
+                for(let j = 1; j < item.length; j++) {
+                    data3 += "<td>" + item[j] + "</td>";
+                }
+                data3 += "";
+            }
+            document.getElementById('cartList').innerHTML = data3;
+        }
+     </script>
+    </body>
+    
+    </html>
