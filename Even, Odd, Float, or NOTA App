@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Even, Odd, Float, or None of the Above</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+
+    <script>
+        function checkInput() {
+            var input = document.getElementById("txtInput").value;
+            var results = document.getElementById("results");
+                    
+            if(isNaN(input)) {
+                    results.innerHTML = "None of the Above";
+            }
+            else {
+                if(input % 1 != 0)
+                    results.innerHTML = "Float";
+                else if(input % 2 == 0)
+                    results.innerHTML = "Even";
+                else
+                    results.innerHTML = "Odd";
+                }               
+            }
+    </script>
+    </head>
+
+    <body>
+
+        <h1>Even, Odd, Float, or None of the Above</h1>
+        
+        <label for="txtInput">
+            Enter your input:
+        </label> <input type="text" id="txtInput">
+        <br>
+        <br>
+
+        <button type="button" onClick="checkInput();">
+            Determine the type of number
+        </button>
+        <br>
+
+        <div id="results">
+        </div>
+
+    </body>
+</html>
