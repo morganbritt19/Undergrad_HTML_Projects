@@ -22,9 +22,5 @@
         </div>
 
         <input type="submit" onclick="shout()">
-            
-
-        <br>
-        <footer><br> &copy; Copyright 2021</footer>
     </body>
 </html>
