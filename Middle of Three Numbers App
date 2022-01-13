@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Middle of Three Numbers</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+
+        <script>
+            function middle() {
+
+            var first = parseInt(document.getElementById("first").value);
+            var second = parseInt(document.getElementById("second").value);
+            var third = parseInt(document.getElementById("third").value);
+
+            if((first > second && first < third) || (first < second && first > third)) {
+            document.getElementById("result").innerHTML = "First number (" + first + ") is the middle number.";
+            }
+            else if((second > first && second < third) || (second < first && second > third)) {
+            document.getElementById("result").innerHTML = "Second number (" + second + ") is the middle number.";
+            }
+            else{
+            document.getElementById("result").innerHTML = "Third number (" + third + ") is the middle number.";
+            }
+            }
+            </script>
+    </head>
+
+    <body>
+        
+        <h1>Middle of Three Numbers</h1>
+        
+        <label>
+            First:
+        </label> <input id="first">
+        <br>
+
+        <label>
+            Second:
+        </label> <input id="second">
+        <br>
+
+        <label>
+            Third:
+        </label> <input id="third">
+        <br>
+  
+<div id="result">
+</div>
+
+<input type="button" value="Find Middle Number" onclick="middle();">
+
+    </body>
+</html>
