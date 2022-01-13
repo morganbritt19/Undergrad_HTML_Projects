@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Shouting App</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body style="text-align: center;">
+
+        <script>
+            function shout() {
+                let loud = prompt("Enter the text you want to shout: ");
+                
+                document.getElementById("allcaps").innerHTML = loud.toUpperCase();
+            }
+        </script>
+
+        <h1>Shouting App</h1>
+
+        <div id="allcaps">
+        </div>
+
+        <input type="submit" onclick="shout()">
+            
+
+        <br>
+        <footer><br> &copy; Copyright 2021</footer>
+    </body>
+</html>
