@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Range Check App</title>
+        <meta charset="utf-8">
+	<link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <h1 style="text-align: center;">Range Check App</h1>
+
+        <script>
+            function generateresponse(){
+                var firstvalue = parseInt(prompt("Enter a minimum number for a range."));
+                var secondvalue = parseInt(prompt("Enter a maximum value for a range."));
+                var thirdvalue = parseInt(prompt("Enter any value."));
+
+                if (thirdvalue < firstvalue) {
+                    document.getElementById("result").innerHTML = "The third value is lower than the minimum."
+   
+                } else if (thirdvalue < secondvalue) {
+                    document.getElementById("result").innerHTML = "The third value is in range of the minimum and maximum."
+                } else if (thirdvalue > secondvalue) {
+                    document.getElementById("result").innerHTML = "The third value is greater than the maximum."
+                }
+            }
+        </script>
+
+        <div id="result" style="text-align: center;">
+        </div>
+
+        <div style="text-align: center;">
+            <button type="button" onclick="generateresponse()">
+                Enter Values
+            </button>
+        </div>
+
+        <br>
+        <footer style="text-align: center;"><br> &copy; Copyright 2021</footer>
+    </body>
+</html>
