@@ -18,6 +18,7 @@
            <tbody id="pricelist"></tbody>
 
            <tr>
+// Product selection
                <th>Select Product</th>
                <td id="selectproductlist"></td>
                <th>Quantity</th>
@@ -35,6 +36,7 @@
        </table>
     </div>
 
+// Backend functions
     <script>
         let products = [
             [1, 'Umbrella'],
@@ -55,19 +57,22 @@
             data += "<td>"+ activity[1] + "</td>";
             data1 += "<option value='" + activity[0] + "'>" + activity[1] + "</option>";
         });
- 
+
+// Increment by 1
         data1 += '</select>';
  
         document.getElementById('selectproductlist').innerHTML = data1;
         document.getElementById('productlist').innerHTML = data;
- 
+
+// Value of product
         price = '<th>Price</th>';
         prices.forEach(activity => {
             price += "<td>$"+ activity[1] + "</td>";
         });
         
         document.getElementById('pricelist').innerHTML = price;    
-       
+
+// Cart array
         let cartItems = [];
         function AddProduct(){
  
