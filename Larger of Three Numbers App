@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <title>Larger of Three Numbers</title>
         <meta charset="utf-8">
@@ -38,7 +39,6 @@
     <body>
         
         <h1>Larger of Three Numbers</h1>
-
         <label>
             Enter the first number:
         </label>
