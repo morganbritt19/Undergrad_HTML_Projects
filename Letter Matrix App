@@ -8,7 +8,8 @@
 
     <body>
         <h1>The Letter Matrix</h1>
-        
+
+// There are probably better ways to do this, but I am not that smart
         <script>
             function letterMatrix() {
             var script = "";
@@ -31,6 +32,7 @@
             }
             </script>
 
+// Front end
             <form>
                 <input type="number" id="row" placeholder="Rows: " />
 
