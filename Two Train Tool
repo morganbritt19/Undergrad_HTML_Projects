@@ -5,6 +5,7 @@
         <meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
 
+// Script needs further research and development for efficiency
     <script>
         function calculateTime() {
             let trainSpeedA = parseInt(document.getElementById("trainA").value);
