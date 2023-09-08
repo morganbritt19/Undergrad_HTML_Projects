@@ -6,13 +6,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
 
-<!--Course Code and Section: CSCI 3300-W1-->
-        <!--Program Date: 8/30/2021-->
-        <!--My name: Morgan Britt-->
-
     <body>
-        
-
         <h1>Image Display Application</h1>
 
         <script>
