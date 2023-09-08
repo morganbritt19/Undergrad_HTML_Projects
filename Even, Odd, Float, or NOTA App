@@ -5,6 +5,7 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
 
+// Function to check user input
     <script>
         function checkInput() {
             var input = document.getElementById("txtInput").value;
@@ -25,8 +26,8 @@
     </script>
     </head>
 
+// Graphical frontend
     <body>
-
         <h1>Even, Odd, Float, or None of the Above</h1>
         
         <label for="txtInput">
@@ -42,6 +43,5 @@
 
         <div id="results">
         </div>
-
     </body>
 </html>
