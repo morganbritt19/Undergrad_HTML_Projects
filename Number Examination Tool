@@ -15,7 +15,8 @@
             let total = 0;
             let totalFloat = 0;
             let floatCount = 0;
-          
+           
+	   //While loop to continuously prompt for numbers
            while(true) {
                let i = prompt("Enter a number: ");
 
@@ -26,6 +27,7 @@
                numCount++
            }
 
+	   //For loop to determine even/odd values
            for(i = 0; i < arr.length; i++) {
                if(Number.isInteger(arr[i])) {
                    if(arr[i] % 2 == 0) {
@@ -61,6 +63,5 @@
                + (totalFloat / floatCount).toFixed(2) + ".<br>");
            }
         </script>
-
     </body>
 </html>
